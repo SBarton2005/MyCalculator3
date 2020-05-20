@@ -1,1 +1,2 @@
-import bas as bas
+import cal
+print(cal.mai())
