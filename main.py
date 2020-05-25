@@ -1,2 +1,2 @@
 import cal
-print(cal.mai())
+cal.mai()

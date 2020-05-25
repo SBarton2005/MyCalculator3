@@ -25,13 +25,14 @@ def sol():
   return y
 def fac():
   xa, xb = roo()
+  a = input("a again: ")
   if xa < 0:
     if xb < 0:
-      return f"(x+{xa*-1})(x+{xb*-1})"
-    return f"(x+{xa*-1})(x-{xb})"
+      return f"{a}(x+{xa*-1})(x+{xb*-1})"
+    return f"{a}(x+{xa*-1})(x-{xb})"
   if xb < 0:
-    return f"(x-{xa})(x+{xb*-1})"
-  return f"(x-{xa})(x-{xb})"
+    return f"{a}(x-{xa})(x+{xb*-1})"
+  return f"{a}(x-{xa})(x-{xb})"
 def vef():
   h, k = ver()
   a = float(input("a again: "))
@@ -48,6 +49,12 @@ def vts():
   h = float(input("x coordinate of vertex: "))
   k = float(input("y coordinate of vertex: "))
   a = float(input("a: "))
-  b = h * 2 * a
+  b = -1 * h * 2 * a
   c = (h ** 2) * a + k
-  return f"{a}x^2+{b}x+{c}"
+  if b < 0:
+    if c < 0:
+      return f"{a}x^2 {b}x {c}"
+    return f"{a}x^2 {b}x + {c}"
+  if c < 0:
+    return f"{a}x^2 + {b}x {c}"
+  return f"{a}x^2 + {b}x + {c}"
