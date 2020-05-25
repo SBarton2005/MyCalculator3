@@ -1,4 +1,4 @@
-import bas, cir, qua, rit
+import bas, cir, qua, rit, lin
 def cbas():
   p = input("Bas Operation: ")
   if p == "add":
@@ -58,7 +58,7 @@ def crit():
   else:
     return "You didn\'t pick a rit operation. Try pll, phl, gen, che, sin, cos, or tan."
 def ccir():
-  p = input("Cir Shape: ")
+  p = input("Cir Operation: ")
   if p == "cer":
     return cir.cer()
   elif p == "are":
@@ -79,6 +79,12 @@ def ccir():
     return cir.col()
   else:
     return "You didn\'t pick a cir opperation. Try cer, are, ssa, svl, cys, cyv, cos, cov, or col."
+def clin():
+  p = input("Lin Operation: ")
+  if p == "slo":
+    return lin.slo()
+  elif p == "pts":
+    return lin.pts()
 def mai():
   c = True
   while c == True:
@@ -91,8 +97,10 @@ def mai():
       print(crit())
     elif o == "cir":
       print(ccir())
+    elif o == "lin":
+      print(clin())
     else:
-      print("You didn\'t pick one of the sections we have operations for. Try bas, mul, qua, rit, or cir")
+      print("You didn\'t pick one of the sections we have operations for. Try bas, mul, qua, rit, cir, or lin")
     i = input("Continue: ")
     if i == "n":
       c = False
