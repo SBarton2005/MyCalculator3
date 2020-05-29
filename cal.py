@@ -37,6 +37,8 @@ def cqua():
     return qua.vef()
   elif p == "vts":
     return qua.vts()
+  elif p == "exp":
+    return qua.exp()
   else:
     return "You didn\'t pick a qua operation. Try roo, sol, ver, or fac."
 def crit():
@@ -85,6 +87,8 @@ def clin():
     return lin.slo()
   elif p == "pts":
     return lin.pts()
+  elif p == "pti":
+    return lin.pti()
 def mai():
   c = True
   while c == True:

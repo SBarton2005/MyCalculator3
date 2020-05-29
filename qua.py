@@ -58,3 +58,19 @@ def vts():
   if c < 0:
     return f"{a}x^2 + {b}x {c}"
   return f"{a}x^2 + {b}x + {c}"
+def exp():
+  a = float(input("Coefficent 1: "))
+  b = float(input("Constant 1: "))
+  c = float(input("Coefficent 2: "))
+  d = float(input("Constant 2: "))
+  h = float(input("Outside Input: "))
+  e = h * a * c
+  f = h * ((a * d) + (b * c))
+  g = h * b * d
+  if f < 0:
+    if g < 0:
+      return f"{e}x^2 {f}x {g}"
+    return f"{e}x^2 {f}x + {g}"
+  if g < 0:
+    return f"{e}x^2 + {f}x {g}"
+  return f"{e}x^2 + {f}x + {g}"

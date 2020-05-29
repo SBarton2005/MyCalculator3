@@ -17,7 +17,13 @@ def pts():
     return f"{-a}x + {b}y = {c}"
   return f"{a}x - {b}y = {-c}"
 def pti():
-  pass
+  x = float(input("x coordinate: "))
+  y = float(input("y coordinate: "))
+  m = slo()
+  b = m * -x + y
+  if b < 0:
+    return f"y = {m}x {b}"
+  return f"y = {m}x + {b}"
 def stp():
   pass
 def sti():
